@@ -2,34 +2,34 @@ package com.example.BiomassTransportationCalculatorTool.model;
 
 public class DataFrom {
     // Input Fields
-    private double yieldPerAcre;
-    private double truckCapacity;
-    private double tripLength;
-    private double fuelEconomy;
-    private double interestRate;
-    private double labor;
-    private double fuel;
-    private double repairs;
-    private double loadTime;
-    private double unloadTime;
-    private double idlingTime;
-    private double idlingFuelUse;
-    private double loadedSpeed;
-    private double unloadedSpeed;
-    private double purchase;
-    private double sales;
-    private double yearsOfUse;
-    private double annualHoursOfUse;
+    private Double yieldPerAcre;
+    private Double truckCapacity;
+    private Double tripLength;
+    private Double fuelEconomy;
+    private Double interestRate;
+    private Double labor;
+    private Double fuel;
+    private Double repairs;
+    private Double loadTime;
+    private Double unloadTime;
+    private Double idlingTime;
+    private Double idlingFuelUse;
+    private Double loadedSpeed;
+    private Double unloadedSpeed;
+    private Double purchase;
+    private Double sales;
+    private Double yearsOfUse;
+    private Double annualHoursOfUse;
 
     // Output Fields
-    private double tripsPerAcre;
-    private double tripDuration;
-    private double interestPerHour;
-    private double depreciation;
-    private double depreciationPerYear;
-    private double depreciationPerHour;
-    private double costPerAcre;
-    private double costPerTon;
+    private Double tripsPerAcre;
+    private Double tripDuration;
+    private Double interestPerHour;
+    private Double depreciation;
+    private Double depreciationPerYear;
+    private Double depreciationPerHour;
+    private Double costPerAcre;
+    private Double costPerTon;
 
     @Override
     public String toString() {
@@ -63,212 +63,211 @@ public class DataFrom {
                 '}';
     }
 
-    public double getDepreciation() {
-        return depreciation;
-    }
-
-    public void setDepreciation(double depreciation) {
-        this.depreciation = depreciation;
-    }
-
-    public double getTripsPerAcre() {
-        return tripsPerAcre;
-    }
-
-    public void setTripsPerAcre(double tripsPerAcre) {
-        this.tripsPerAcre = tripsPerAcre;
-    }
-
-    public double getTripDuration() {
-        return tripDuration;
-    }
-
-    public void setTripDuration(double tripDuration) {
-        this.tripDuration = tripDuration;
-    }
-
-    public double getInterestPerHour() {
-        return interestPerHour;
-    }
-
-    public void setInterestPerHour(double interestPerHour) {
-        this.interestPerHour = interestPerHour;
-    }
-
-    public double getDepreciationPerYear() {
-        return depreciationPerYear;
-    }
-
-    public void setDepreciationPerYear(double depreciationPerYear) {
-        this.depreciationPerYear = depreciationPerYear;
-    }
-
-    public double getDepreciationPerHour() {
-        return depreciationPerHour;
-    }
-
-    public void setDepreciationPerHour(double depreciationPerHour) {
-        this.depreciationPerHour = depreciationPerHour;
-    }
-
-    public double getCostPerAcre() {
-        return costPerAcre;
-    }
-
-    public void setCostPerAcre(double costPerAcre) {
-        this.costPerAcre = costPerAcre;
-    }
-
-    public double getCostPerTon() {
-        return costPerTon;
-    }
-
-    public void setCostPerTon(double costPerTon) {
-        this.costPerTon = costPerTon;
-    }
-
-    public double getYieldPerAcre() {
+    public Double getYieldPerAcre() {
         return yieldPerAcre;
     }
 
-    public void setYieldPerAcre(double yieldPerAcre) {
+    public void setYieldPerAcre(Double yieldPerAcre) {
         this.yieldPerAcre = yieldPerAcre;
     }
 
-    public double getTruckCapacity() {
+    public Double getTruckCapacity() {
         return truckCapacity;
     }
 
-    public void setTruckCapacity(double truckCapacity) {
+    public void setTruckCapacity(Double truckCapacity) {
         this.truckCapacity = truckCapacity;
     }
 
-    public double getTripLength() {
+    public Double getTripLength() {
         return tripLength;
     }
 
-    public void setTripLength(double tripLength) {
+    public void setTripLength(Double tripLength) {
         this.tripLength = tripLength;
     }
 
-    public double getFuelEconomy() {
+    public Double getFuelEconomy() {
         return fuelEconomy;
     }
 
-    public void setFuelEconomy(double fuelEconomy) {
+    public void setFuelEconomy(Double fuelEconomy) {
         this.fuelEconomy = fuelEconomy;
     }
 
-    public double getInterestRate() {
+    public Double getInterestRate() {
         return interestRate;
     }
 
-    public void setInterestRate(double interestRate) {
+    public void setInterestRate(Double interestRate) {
         this.interestRate = interestRate;
     }
 
-    public double getLabor() {
+    public Double getLabor() {
         return labor;
     }
 
-    public void setLabor(double labor) {
+    public void setLabor(Double labor) {
         this.labor = labor;
     }
 
-    public double getFuel() {
+    public Double getFuel() {
         return fuel;
     }
 
-    public void setFuel(double fuel) {
+    public void setFuel(Double fuel) {
         this.fuel = fuel;
     }
 
-    public double getRepairs() {
+    public Double getRepairs() {
         return repairs;
     }
 
-    public void setRepairs(double repairs) {
+    public void setRepairs(Double repairs) {
         this.repairs = repairs;
     }
 
-    public double getLoadTime() {
+    public Double getLoadTime() {
         return loadTime;
     }
 
-    public void setLoadTime(double loadTime) {
+    public void setLoadTime(Double loadTime) {
         this.loadTime = loadTime;
     }
 
-    public double getUnloadTime() {
+    public Double getUnloadTime() {
         return unloadTime;
     }
 
-    public void setUnloadTime(double unloadTime) {
+    public void setUnloadTime(Double unloadTime) {
         this.unloadTime = unloadTime;
     }
 
-    public double getIdlingTime() {
+    public Double getIdlingTime() {
         return idlingTime;
     }
 
-    public void setIdlingTime(double idlingTime) {
+    public void setIdlingTime(Double idlingTime) {
         this.idlingTime = idlingTime;
     }
 
-    public double getIdlingFuelUse() {
+    public Double getIdlingFuelUse() {
         return idlingFuelUse;
     }
 
-    public void setIdlingFuelUse(double idlingFuelUse) {
+    public void setIdlingFuelUse(Double idlingFuelUse) {
         this.idlingFuelUse = idlingFuelUse;
     }
 
-    public double getLoadedSpeed() {
+    public Double getLoadedSpeed() {
         return loadedSpeed;
     }
 
-    public void setLoadedSpeed(double loadedSpeed) {
+    public void setLoadedSpeed(Double loadedSpeed) {
         this.loadedSpeed = loadedSpeed;
     }
 
-    public double getUnloadedSpeed() {
+    public Double getUnloadedSpeed() {
         return unloadedSpeed;
     }
 
-    public void setUnloadedSpeed(double unloadedSpeed) {
+    public void setUnloadedSpeed(Double unloadedSpeed) {
         this.unloadedSpeed = unloadedSpeed;
     }
 
-    public double getPurchase() {
+    public Double getPurchase() {
         return purchase;
     }
 
-    public void setPurchase(double purchase) {
+    public void setPurchase(Double purchase) {
         this.purchase = purchase;
     }
 
-    public double getSales() {
+    public Double getSales() {
         return sales;
     }
 
-    public void setSales(double sales) {
+    public void setSales(Double sales) {
         this.sales = sales;
     }
 
-    public double getYearsOfUse() {
+    public Double getYearsOfUse() {
         return yearsOfUse;
     }
 
-    public void setYearsOfUse(double yearsOfUse) {
+    public void setYearsOfUse(Double yearsOfUse) {
         this.yearsOfUse = yearsOfUse;
     }
 
-    public double getAnnualHoursOfUse() {
+    public Double getAnnualHoursOfUse() {
         return annualHoursOfUse;
     }
 
-    public void setAnnualHoursOfUse(double annualHoursOfUse) {
+    public void setAnnualHoursOfUse(Double annualHoursOfUse) {
         this.annualHoursOfUse = annualHoursOfUse;
     }
 
+    public Double getTripsPerAcre() {
+        return tripsPerAcre;
+    }
+
+    public void setTripsPerAcre(Double tripsPerAcre) {
+        this.tripsPerAcre = tripsPerAcre;
+    }
+
+    public Double getTripDuration() {
+        return tripDuration;
+    }
+
+    public void setTripDuration(Double tripDuration) {
+        this.tripDuration = tripDuration;
+    }
+
+    public Double getInterestPerHour() {
+        return interestPerHour;
+    }
+
+    public void setInterestPerHour(Double interestPerHour) {
+        this.interestPerHour = interestPerHour;
+    }
+
+    public Double getDepreciation() {
+        return depreciation;
+    }
+
+    public void setDepreciation(Double depreciation) {
+        this.depreciation = depreciation;
+    }
+
+    public Double getDepreciationPerYear() {
+        return depreciationPerYear;
+    }
+
+    public void setDepreciationPerYear(Double depreciationPerYear) {
+        this.depreciationPerYear = depreciationPerYear;
+    }
+
+    public Double getDepreciationPerHour() {
+        return depreciationPerHour;
+    }
+
+    public void setDepreciationPerHour(Double depreciationPerHour) {
+        this.depreciationPerHour = depreciationPerHour;
+    }
+
+    public Double getCostPerAcre() {
+        return costPerAcre;
+    }
+
+    public void setCostPerAcre(Double costPerAcre) {
+        this.costPerAcre = costPerAcre;
+    }
+
+    public Double getCostPerTon() {
+        return costPerTon;
+    }
+
+    public void setCostPerTon(Double costPerTon) {
+        this.costPerTon = costPerTon;
+    }
 }

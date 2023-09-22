@@ -26,13 +26,32 @@ public class SiteViewController {
         return "home";
     }
 
+    public double roundToTwoDecimals(double value) {
+        return Math.round(value * 100.0) / 100.0;
+    }
     private DataFrom callApi(DataFrom dataForm) {
         System.out.println("API Call Started with the following data : "+dataForm.toString());
         // Logic to call the API and set output fields.
-        dataForm.setTripsPerAcre(dataForm.getYieldPerAcre()/dataForm.getTruckCapacity());
-        dataForm.setTripDuration(((dataForm.getLoadTime()+dataForm.getUnloadTime()+dataForm.getIdlingTime()+dataForm.getTripLength())/
-                (dataForm.getLoadedSpeed()+dataForm.getTripLength()))/dataForm.getUnloadedSpeed());
+        // Calculations stored in variables
+        Double tripsPerAcreValue = dataForm.getYieldPerAcre() / dataForm.getTruckCapacity();
+        Double tripDurationValue = dataForm.getLoadTime() + dataForm.getUnloadTime() + dataForm.getIdlingTime() + (dataForm.getTripLength() / dataForm.getLoadedSpeed()) + (dataForm.getTripLength() / dataForm.getUnloadedSpeed());
+        Double interestPerHourValue = (dataForm.getPurchase() * dataForm.getInterestRate()) / 150 / 100;
+        Double depreciationValue = dataForm.getPurchase() - dataForm.getSales();
+        Double depreciationPerYearValue = depreciationValue / dataForm.getYearsOfUse();
+        Double depreciationPerHourValue = depreciationPerYearValue / dataForm.getAnnualHoursOfUse();
+        Double costPerAcreValue = tripsPerAcreValue * ((dataForm.getLabor() + dataForm.getRepairs() + interestPerHourValue + depreciationPerHourValue) * tripDurationValue
+                + dataForm.getTripLength() / dataForm.getFuelEconomy() * 2 * dataForm.getFuel() + dataForm.getIdlingTime() * dataForm.getIdlingFuelUse() * dataForm.getFuel());
+        Double costPerTonValue = costPerAcreValue / dataForm.getYieldPerAcre();
 
+        // Setting the computed values to the properties of dataForm
+        dataForm.setTripsPerAcre(roundToTwoDecimals(tripsPerAcreValue));
+        dataForm.setTripDuration(roundToTwoDecimals(tripDurationValue));
+        dataForm.setInterestPerHour(roundToTwoDecimals(interestPerHourValue));
+        dataForm.setDepreciation(roundToTwoDecimals(depreciationValue));
+        dataForm.setDepreciationPerYear(roundToTwoDecimals(depreciationPerYearValue));
+        dataForm.setDepreciationPerHour(roundToTwoDecimals(depreciationPerHourValue));
+        dataForm.setCostPerAcre(roundToTwoDecimals(costPerAcreValue));
+        dataForm.setCostPerTon(roundToTwoDecimals(costPerTonValue));
         return dataForm; // This should be replaced with the processed response.
     }
 }
