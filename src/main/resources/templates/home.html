@@ -1,9 +1,19 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Data Form</title>
+    <title>Biomass Transportation Calculator Tool</title>
     <link href="assets/css/site.css" rel="stylesheet" />
 </head>
+
+
+<header style="background-color: #0A5640; padding: 10px 20px; display: flex; align-items: center; justify-content: space-between; font-family: 'Arial', sans-serif;">
+    <!-- Logo placeholder. Replace with your actual logo. -->
+    <img src="assets/images/ndsulogo.gif" alt="Logo" style="height: 60px;">
+
+    <!-- Title -->
+    <h1 style="font-size: 20px; color: #ffffff; margin: 0;">Biomass Transportation Calculator Tool</h1>
+</header>
+
 <body>
 
 <form action="#" th:action="@{/processForm}" th:object="${dataForm}" method="post">
@@ -158,6 +168,34 @@
         </tr>
     </table>
 </form>
+
+<footer style="margin-top: 30px; padding: 20px; background-color: #0A5640; color: #ecf0f1; font-family: 'Arial', sans-serif;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+
+        <!-- Developer info -->
+        <p style="font-size: 16px; margin-bottom: 8px;">
+            Developed by <strong>David Ripplinger</strong>, Bioproducts and Bioenergy Economics Specialist,
+            <span style="color: #3498db;">North Dakota State University Extension</span>
+            Web application created by <strong>Wordh Ul Hasan</strong>.
+        </p>
+
+        <!-- Contact info -->
+        <p style="font-size: 15px; margin-bottom: 10px;">
+            Questions or comments? Please contact
+            <span style="color: #FFC72A;"><strong>David Ripplinger</strong></span> at
+            <a href="tel:+17012315265" style="color: #3498db; text-decoration: none;">701-231-5265</a> or
+            <a href="mailto:david.ripplinger@ndsu.edu" style="color: #3498db; text-decoration: none;">david.ripplinger@ndsu.edu</a>
+        </p>
+
+        <!-- Disclaimer info -->
+        <p style="font-size: 14px; line-height: 1.6;">
+            NDSU does not discriminate in its programs and activities on the basis of age, color, gender expression/identity, genetic information, marital status, national origin, participation in lawful off-campus activity, physical or mental disability, pregnancy, public assistance status, race, religion, sex, sexual orientation, spousal relationship to current employee, or veteran status, as applicable. 
+            Direct inquiries to Vice Provost for Title IX/ADA Coordinator, Old Main 201, NDSU Main Campus, 701-231-7708.
+        </p>
+
+    </div>
+</footer>
+
 
 </body>
 </html>
