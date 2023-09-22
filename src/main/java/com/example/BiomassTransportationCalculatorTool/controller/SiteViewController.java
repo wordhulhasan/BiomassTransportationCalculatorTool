@@ -12,11 +12,6 @@ import javax.xml.crypto.Data;
 @Controller
 public class SiteViewController {
 
-//    @GetMapping("/")
-//    public String homePage(Model model) {
-//        return "home";
-//    }
-
     @GetMapping("/")
     public String formData(Model model) {
         model.addAttribute("dataForm", new DataFrom());
@@ -32,12 +27,12 @@ public class SiteViewController {
     }
 
     private DataFrom callApi(DataFrom dataForm) {
-        System.out.println(dataForm.toString());
+        System.out.println("API Call Started with the following data : "+dataForm.toString());
         // Logic to call the API and set output fields.
-        if(dataForm.getTripLength()>100)
-            dataForm.setTripDuration(120);
-        else
-            dataForm.setTripDuration(100);
+        dataForm.setTripsPerAcre(dataForm.getYieldPerAcre()/dataForm.getTruckCapacity());
+        dataForm.setTripDuration(((dataForm.getLoadTime()+dataForm.getUnloadTime()+dataForm.getIdlingTime()+dataForm.getTripLength())/
+                (dataForm.getLoadedSpeed()+dataForm.getTripLength()))/dataForm.getUnloadedSpeed());
+
         return dataForm; // This should be replaced with the processed response.
     }
 }

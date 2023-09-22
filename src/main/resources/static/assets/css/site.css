@@ -1,51 +1,111 @@
-/* Reset some default padding and margin */
-body, h3 {
-    margin: 0;
-    padding: 0;
-}
+/*!* Reset some default padding and margin *!*/
+/*body, h3 {*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*}*/
 
+/*body {*/
+/*    !* Set a background color for the body *!*/
+/*    background-color: #f7f7f7;*/
+/*    font-family: Arial, sans-serif;*/
+/*}*/
+
+/*form {*/
+/*    !* Center the form *!*/
+/*    width: 500px;*/
+/*    margin: 50px auto;*/
+/*    padding: 30px;*/
+/*    background-color: #ffffff;*/
+/*    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
+/*    border-radius: 8px;*/
+/*}*/
+
+/*label {*/
+/*    !* Style the labels *!*/
+/*    display: block;*/
+/*    margin-bottom: 8px;*/
+/*    font-weight: bold;*/
+/*}*/
+
+/*input[type="number"] {*/
+/*    !* Style the input fields *!*/
+/*    width: 100%;*/
+/*    padding: 10px;*/
+/*    margin-bottom: 20px;*/
+/*    border: 1px solid #ccc;*/
+/*    border-radius: 4px;*/
+/*}*/
+
+/*button {*/
+/*    !* Style the submit button *!*/
+/*    padding: 10px 15px;*/
+/*    background-color: #007BFF;*/
+/*    border: none;*/
+/*    border-radius: 4px;*/
+/*    color: white;*/
+/*    font-weight: bold;*/
+/*    cursor: pointer;*/
+/*    transition: background-color 0.3s;*/
+/*}*/
+
+/*button:hover {*/
+/*    background-color: #0056b3;*/
+/*}*/
+
+/*h3 {*/
+/*    margin-bottom: 20px;*/
+/*    font-size: 1.5em;*/
+/*}*/
+
+/*span {*/
+/*    !* Style the output text *!*/
+/*    margin-left: 10px;*/
+/*    font-weight: normal;*/
+/*}*/
 body {
-    /* Set a background color for the body */
-    background-color: #f7f7f7;
     font-family: Arial, sans-serif;
+    padding: 2% 10%;
+    background-color: #f7f7f7;
 }
 
 form {
-    /* Center the form */
-    width: 500px;
-    margin: 50px auto;
-    padding: 30px;
     background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    padding: 10px;
 }
 
 label {
-    /* Style the labels */
-    display: block;
-    margin-bottom: 8px;
     font-weight: bold;
 }
 
 input[type="number"] {
-    /* Style the input fields */
     width: 100%;
     padding: 10px;
-    margin-bottom: 20px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 5px;
+    box-sizing: border-box;
 }
 
 button {
-    /* Style the submit button */
-    padding: 10px 15px;
+    display: block;
+    width: 100%;
+    padding: 10px;
     background-color: #007BFF;
+    color: #ffffff;
     border: none;
-    border-radius: 4px;
-    color: white;
-    font-weight: bold;
+    border-radius: 5px;
+    font-size: 1.1em;
     cursor: pointer;
-    transition: background-color 0.3s;
+    margin-top: 20px;
 }
 
 button:hover {
@@ -53,12 +113,17 @@ button:hover {
 }
 
 h3 {
-    margin-bottom: 20px;
-    font-size: 1.5em;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
 }
 
 span {
-    /* Style the output text */
-    margin-left: 10px;
     font-weight: normal;
+}
+
+/* Adding space between the table rows */
+tr:not(:last-child) {
+    border-bottom: 1px solid #eee;
 }
