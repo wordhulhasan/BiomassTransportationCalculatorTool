@@ -1,10 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Data Form</title>
 </head>
 <body>
-This is my page
+
+<form action="#" th:action="@{/processForm}" th:object="${dataForm}" method="post">
+
+    <!-- Input Fields -->
+    <label>Yield (Tons per Acre):</label>
+    <input type="number" step="0.01" th:field="*{yieldPerAcre}"><br>
+
+    <label>Truck Capacity (Weight):</label>
+    <input type="number" step="0.01" th:field="*{truckCapacity}"><br>
+
+    <label>Trip Length:</label>
+    <input type="number" step="0.01" th:field="*{tripLength}"><br>
+
+    <label>Fuel Economy:</label>
+    <input type="number" step="0.01" th:field="*{fuelEconomy}"><br>
+
+    <label>Interest Rate:</label>
+    <input type="number" step="0.01" th:field="*{interestRate}"><br>
+
+    <label>Labor:</label>
+    <input type="number" step="0.01" th:field="*{labor}"><br>
+
+    <label>Fuel:</label>
+    <input type="number" step="0.01" th:field="*{fuel}"><br>
+
+    <label>Repairs:</label>
+    <input type="number" step="0.01" th:field="*{repairs}"><br>
+
+    <label>Load Time:</label>
+    <input type="number" step="0.01" th:field="*{loadTime}"><br>
+
+    <label>Unload Time:</label>
+    <input type="number" step="0.01" th:field="*{unloadTime}"><br>
+
+    <label>Idling Time:</label>
+    <input type="number" step="0.01" th:field="*{idlingTime}"><br>
+
+    <label>Idling Fuel Use:</label>
+    <input type="number" step="0.01" th:field="*{idlingFuelUse}"><br>
+
+    <label>Loaded Speed:</label>
+    <input type="number" step="0.01" th:field="*{loadedSpeed}"><br>
+
+    <label>Unloaded Speed:</label>
+    <input type="number" step="0.01" th:field="*{unloadedSpeed}"><br>
+
+    <label>Purchase:</label>
+    <input type="number" step="0.01" th:field="*{purchase}"><br>
+
+    <label>Sales:</label>
+    <input type="number" step="0.01" th:field="*{sales}"><br>
+
+    <label>Years of Use:</label>
+    <input type="number" step="0.01" th:field="*{yearsOfUse}"><br>
+
+    <label>Annual Hours of Use:</label>
+    <input type="number" step="0.01" th:field="*{annualHoursOfUse}"><br>
+
+    <button type="submit">Submit</button>
+
+    <!-- Output Fields -->
+    <h3>Results:</h3>
+    <label>Trips per Acre:</label>
+    <span th:text="${dataForm.tripsPerAcre}"></span><br>
+
+    <label>Trip Duration:</label>
+    <span th:text="${dataForm.tripDuration}"></span><br>
+
+    <label>Interest per Hour:</label>
+    <span th:text="${dataForm.interestPerHour}"></span><br>
+
+    <label>Depreciation:</label><br>
+    <label>Per Year:</label>
+    <span th:text="${dataForm.depreciationPerYear}"></span><br>
+    <label>Per Hour:</label>
+    <span th:text="${dataForm.depreciationPerHour}"></span><br>
+
+    <label>Cost per Acre:</label>
+    <span th:text="${dataForm.costPerAcre}"></span><br>
+
+    <label>Cost per Ton:</label>
+    <span th:text="${dataForm.costPerTon}"></span><br>
+</form>
+
 </body>
 </html>
