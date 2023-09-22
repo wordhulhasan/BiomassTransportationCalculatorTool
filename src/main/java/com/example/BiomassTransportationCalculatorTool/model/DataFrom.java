@@ -25,6 +25,7 @@ public class DataFrom {
     private double tripsPerAcre;
     private double tripDuration;
     private double interestPerHour;
+    private double depreciation;
     private double depreciationPerYear;
     private double depreciationPerHour;
     private double costPerAcre;
@@ -54,11 +55,20 @@ public class DataFrom {
                 ", tripsPerAcre=" + tripsPerAcre +
                 ", tripDuration=" + tripDuration +
                 ", interestPerHour=" + interestPerHour +
+                ", depreciation=" + depreciation +
                 ", depreciationPerYear=" + depreciationPerYear +
                 ", depreciationPerHour=" + depreciationPerHour +
                 ", costPerAcre=" + costPerAcre +
                 ", costPerTon=" + costPerTon +
                 '}';
+    }
+
+    public double getDepreciation() {
+        return depreciation;
+    }
+
+    public void setDepreciation(double depreciation) {
+        this.depreciation = depreciation;
     }
 
     public double getTripsPerAcre() {

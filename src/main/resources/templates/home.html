@@ -2,6 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Data Form</title>
+    <link href="assets/css/site.css" rel="stylesheet" />
 </head>
 <body>
 
@@ -66,26 +67,54 @@
 
     <!-- Output Fields -->
     <h3>Results:</h3>
-    <label>Trips per Acre:</label>
-    <span th:text="${dataForm.tripsPerAcre}"></span><br>
-
-    <label>Trip Duration:</label>
-    <span th:text="${dataForm.tripDuration}"></span><br>
-
-    <label>Interest per Hour:</label>
-    <span th:text="${dataForm.interestPerHour}"></span><br>
-
-    <label>Depreciation:</label><br>
-    <label>Per Year:</label>
-    <span th:text="${dataForm.depreciationPerYear}"></span><br>
-    <label>Per Hour:</label>
-    <span th:text="${dataForm.depreciationPerHour}"></span><br>
-
-    <label>Cost per Acre:</label>
-    <span th:text="${dataForm.costPerAcre}"></span><br>
-
-    <label>Cost per Ton:</label>
-    <span th:text="${dataForm.costPerTon}"></span><br>
+    <table>
+        <tr>
+            <td><label>Trips per Acre:</label></td>
+            <td><span th:text="${dataForm.tripsPerAcre}"></span></td>
+            <td>trips</td>
+        </tr>
+        <tr>
+            <td><label>Trip Duration:</label></td>
+            <td><span th:text="${dataForm.tripDuration}"></span></td>
+            <td>hours</td>
+        </tr>
+        <tr>
+            <td><label>Interest per Hour:</label></td>
+            <td>$<span th:text="${dataForm.interestPerHour}"></span></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="3"></td>
+        </tr>
+        <tr>
+            <td><label>Depreciation:</label></td>
+            <td>$<span th:text="${dataForm.depreciationPerYear * dataForm.yearsOfUse}"></span></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><label>Per Year:</label></td>
+            <td>$<span th:text="${dataForm.depreciationPerYear}"></span></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><label>Per Hour:</label></td>
+            <td>$<span th:text="${dataForm.depreciationPerHour}"></span></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="3"></td>
+        </tr>
+        <tr>
+            <td><label>Cost per Acre:</label></td>
+            <td>$<span th:text="${dataForm.costPerAcre}"></span></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><label>Cost per Ton:</label></td>
+            <td>$<span th:text="${dataForm.costPerTon}"></span></td>
+            <td></td>
+        </tr>
+    </table>
 </form>
 
 </body>
