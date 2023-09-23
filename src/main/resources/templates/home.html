@@ -116,6 +116,7 @@
 
     </table>
     <button type="submit">Submit</button>
+    <button onclick="resetForm()"> Reset</button>
 
     <!-- Output Fields -->
     <h3>Results:</h3>
@@ -195,6 +196,16 @@
 
     </div>
 </footer>
+
+<script>
+    function resetForm() {
+        var inputs = document.querySelectorAll('input[type="number"]');
+        for(var i = 0; i < inputs.length; i++) {
+            inputs[i].value = ""; // clear each input
+        }
+
+    }
+</script>
 
 
 </body>
