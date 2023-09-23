@@ -3,60 +3,11 @@
 
 
 
+#3.1 Project Description
+The Biomass Transportation Calculator Tool is a web application designed to aid in the estimation and calculation of transportation logistics for biomass products. Developed in collaboration with North Dakota State University Extension, the tool offers an intuitive interface for inputting various parameters such as yield, truck capacity, fuel economy, etc., and subsequently outputs relevant transportation statistics.
 
-
-Azure Deployment Script
-
-# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
-# More GitHub Actions for Azure: https://github.com/Azure/actions
-
-name: Build and deploy WAR app to Azure Web App - BiomassTransportationCalculatorTool
-
-on:
-  push:
-    branches:
-      - main
-  workflow_dispatch:
-
-jobs:
-  build:
-    runs-on: windows-latest
-
-    steps:
-      - uses: actions/checkout@v2
-
-      - name: Set up Java version
-        uses: actions/setup-java@v1
-        with:
-          java-version: '11'
-
-      - name: Build with Maven
-        run: mvn clean install
-
-      - name: Upload artifact for deployment job
-        uses: actions/upload-artifact@v2
-        with:
-          name: java-app
-          path: '${{ github.workspace }}/target/*.war'
-
-  deploy:
-    runs-on: windows-latest
-    needs: build
-    environment:
-      name: 'production'
-      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
-
-    steps:
-      - name: Download artifact from build job
-        uses: actions/download-artifact@v2
-        with:
-          name: java-app
-
-      - name: Deploy to Azure Web App
-        id: deploy-to-webapp
-        uses: azure/webapps-deploy@v2
-        with:
-          app-name: 'BiomassTransportationCalculatorTool'
-          slot-name: 'production'
-          publish-profile: ${{ secrets.AzureAppService_PublishProfile_674ff86808ed415d9d8c0d06c55ff58d }}
-          package: '*.war'
+#3.2 Technical Requirements
+Server: A web server that supports HTML and JavaScript (e.g., Apache, Nginx).
+Runtime Environment: Java (for Thymeleaf support).
+Dependencies: Thymeleaf, which is a modern server-side Java template engine for both web and standalone environments.
+Browser: Modern web browsers such as Chrome, Firefox, Safari, or Edge.
