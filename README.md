@@ -32,7 +32,7 @@ Browser: Modern web browsers such as Chrome, Firefox, Safari, or Edge.
 3. Make sure the Maven dependencies are loaded. You should see them in the Maven panel on the right side of the IDE.
 4. Navigate to the `BiomassTransportationCalculatorToolApplication` class in the project explorer.
 5. Right-click on the `BiomassTransportationCalculatorToolApplication` class and select `Run` from the context menu.
-6. The application should start, and you can access it by opening a web browser and navigating to `http://localhost:8080` (or the configured port).
+6. The application should start, and you can access it by opening a web browser and navigating to `http://localhost:8080`.
 
 ### Azure Deployment:
 The Biomass Transportation Calculator Tool is also deployed on the Azure platform and can be accessed directly using the following link:  
