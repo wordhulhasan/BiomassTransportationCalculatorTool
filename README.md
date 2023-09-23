@@ -4,7 +4,7 @@
 
 
 ## 3.1 Project Description
-The Biomass Transportation Calculator Tool is a web application designed to aid in the estimation and calculation of transportation logistics for biomass products. Developed in collaboration with North Dakota State University Extension, the tool offers an intuitive interface for inputting various parameters such as yield, truck capacity, fuel economy, etc., and subsequently outputs relevant transportation statistics. It has been developed using the Spring Boot framework along with Java 11 and Maven for dependency management.****
+The Biomass Transportation Calculator Tool is a web application designed to aid in the estimation and calculation of transportation logistics for biomass products. Developed in collaboration with North Dakota State University Extension, the tool offers an intuitive interface for inputting various parameters such as yield, truck capacity, fuel economy, etc., and subsequently outputs relevant transportation statistics. It has been developed using the Spring Boot framework along with Java 11 and Maven for dependency management.
 
 ## 3.2 Technical Requirements
 Web Server: Apache Tomcat
