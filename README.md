@@ -3,60 +3,42 @@
 
 
 
+## 3.1 Project Description
+The Biomass Transportation Calculator Tool is a web application designed to aid in the estimation and calculation of transportation logistics for biomass products. Developed in collaboration with North Dakota State University Extension, the tool offers an intuitive interface for inputting various parameters such as yield, truck capacity, fuel economy, etc., and subsequently outputs relevant transportation statistics. It has been developed using the Spring Boot framework along with Java 11 and Maven for dependency management.****
+
+## 3.2 Technical Requirements
+Web Server: Apache Tomcat
+Runtime Environment: Java 11
+Dependency Management: Maven
+Framework: Spring Boot application with Java 11.
+Browser: Modern web browsers such as Chrome, Firefox, Safari, or Edge.
+
+## 3.3 Installation Instructions
+
+### Pre-requisites:
+- Make sure you have Java 11 installed on your machine.
+- Maven should be installed for running the project locally without an IDE.
+- Recommended IDE: IntelliJ
+
+### Running Locally Without an IDE:
+1. Navigate to the root directory of the project.
+2. Run the following Maven command to compile and start the application:  
+   `mvn clean install spring-boot:run`
+3. Once the application is started, open a web browser and navigate to `http://localhost:8080` to access the application.
+
+### Running Using IntelliJ:
+1. Install and open IntelliJ.
+2. Choose `Open` and navigate to the project directory to open the project in IntelliJ.
+3. Make sure the Maven dependencies are loaded. You should see them in the Maven panel on the right side of the IDE.
+4. Navigate to the `BiomassTransportationCalculatorToolApplication` class in the project explorer.
+5. Right-click on the `BiomassTransportationCalculatorToolApplication` class and select `Run` from the context menu.
+6. The application should start, and you can access it by opening a web browser and navigating to `http://localhost:8080` (or the configured port).
+
+### Azure Deployment:
+The Biomass Transportation Calculator Tool is also deployed on the Azure platform and can be accessed directly using the following link:  
+[https://biomasstransportationcalculator.azurewebsites.net/](https://biomasstransportationcalculator.azurewebsites.net/)
 
 
-Azure Deployment Script
+That's it! You should now have the Biomass Transportation Calculator Tool running either locally or within IntelliJ.
 
-# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
-# More GitHub Actions for Azure: https://github.com/Azure/actions
-
-name: Build and deploy WAR app to Azure Web App - BiomassTransportationCalculatorTool
-
-on:
-  push:
-    branches:
-      - main
-  workflow_dispatch:
-
-jobs:
-  build:
-    runs-on: windows-latest
-
-    steps:
-      - uses: actions/checkout@v2
-
-      - name: Set up Java version
-        uses: actions/setup-java@v1
-        with:
-          java-version: '11'
-
-      - name: Build with Maven
-        run: mvn clean install
-
-      - name: Upload artifact for deployment job
-        uses: actions/upload-artifact@v2
-        with:
-          name: java-app
-          path: '${{ github.workspace }}/target/*.war'
-
-  deploy:
-    runs-on: windows-latest
-    needs: build
-    environment:
-      name: 'production'
-      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
-
-    steps:
-      - name: Download artifact from build job
-        uses: actions/download-artifact@v2
-        with:
-          name: java-app
-
-      - name: Deploy to Azure Web App
-        id: deploy-to-webapp
-        uses: azure/webapps-deploy@v2
-        with:
-          app-name: 'BiomassTransportationCalculatorTool'
-          slot-name: 'production'
-          publish-profile: ${{ secrets.AzureAppService_PublishProfile_674ff86808ed415d9d8c0d06c55ff58d }}
-          package: '*.war'
+##
